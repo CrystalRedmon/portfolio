@@ -1,0 +1,183 @@
+:root {
+    --black: #201126;
+    --blue: #5377A6;
+    --tan: #A6896F;
+    --lighttan: #F2CEAE;
+    --red: #BF3F3F;
+    --mono: "Nunito", sans-serif;
+    --sans: "PT sans", sans-serif;
+}
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--black);
+    color: white;
+    font-size: var(--font-size);
+}
+
+
+li a {
+    color: white;
+}
+
+li a:hover,
+nav [class*='fa-']:hover {
+    color: var(--blue);
+}
+
+
+h1 {
+    display: inline;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+#intro a {
+    color: var(--red);
+}
+
+#intro a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+/* intro styles */
+#intro {
+    padding-bottom: 3rem;
+    background-color: var(--blue);
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+#intro .name {
+    font-family: var(--mono);
+}
+
+.name span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--aqua);
+    display: block;
+}
+
+#intro h2 {
+    font-size: 4rem;
+}
+
+#contact,
+footer {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contact-container {
+    background-color: var(--tan);
+    padding: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    padding: 1rem;
+}
+
+nav [class*='fa-'] {
+    font-size: 150%;
+    color: var(--tan);
+}
+
+
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*='similey'] {
+    font-size: 85%;
+    padding-right: .5rem;
+}
+
+.button {
+    background-color: var(--blue);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.button:hover {
+    color: white;
+    background-color: var(--red);
+}
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
+
+footer{
+    width: 400px;
+    padding: 3rem 0;
+}
+footer ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 2rem 0;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-flow: row wrap;
+}
+
+footer li{
+    margin: 0;
+}
+
+footer [class*='fa-'] {
+    font-size: 200%;
+    color: var(--red);
+    padding: .5rem;
+}
+
+footer [class*='fa-']:hover{
+    color: var(--blue);
+}
